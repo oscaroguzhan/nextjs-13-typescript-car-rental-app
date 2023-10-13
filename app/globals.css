@@ -1,12 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Neue', cursive ;
+}
 :root {
   --white: #fff;
+  --purple: #4338CA;
+  --bg-dark: #171717
+}
+/* STARTS- GENERAL STYLES */
+.max-width {
+  @apply max-w-[1440px] mx-auto;
+}
+.padding-x {
+  @apply sm:px-16 px-6;
 }
 
+.padding-y {
+  @apply py-4;
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.custom-btn {
+  @apply flex flex-row relative justify-center items-center py-3 px-6 outline-none;
+}
+/* END- GENERAL STYLES */ 
+
+/* START- HERO STYLES */
+.hero {
+  @apply flex xl:flex-row flex-col gap-5 relative z-0 
+}
+.hero__title {
+  @apply 2xl:text-[72px] sm:text-[64px] sm:text-center text-[50px] font-extrabold;
+}
+
+.hero__subtitle {
+  @apply text-[27px] text-black-100 font-light mt-5 ml-3;
+}
+
+.hero__image-container {
+  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+}
+
+.hero__image {
+  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
+}
 
 body {
-  color: rgb(var(--white))
+  color: rgb(var(--white));
 }
