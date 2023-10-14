@@ -1,17 +1,17 @@
 "use client";
 import { CustomButtonProps } from '@/types';
-import Image from 'next/image'
 import React from 'react'
 
-//* keep in mind by default all component that is rendered in next.js is server-side rendered component 
-//* we have click event so this is a client rendered component 
- 
-function CustomButton({title, containerStyle, handleClick}: CustomButtonProps) {
+//* keep in mind by default all component are server-side rendered in next.js and
+//* we have click event so we turn this one to client rendered component
+
+//* it is also important to tell ts which type of props get this custom button component
+function CustomButton({title, containerStyle, handleClick, btnType}: CustomButtonProps) {
 
   return (
     <button className={`custom-btn ${containerStyle}`}
     disabled={false}
-    type={'button'}
+    type={btnType || 'button'}
     onClick={handleClick}
     >
       <span>
