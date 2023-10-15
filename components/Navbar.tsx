@@ -3,7 +3,7 @@ import Image from "next/image"
 import  CustomButton  from "./CustomButton"
 const Navbar = () => {
   return (
-    <header className="w-full sticky top-0 scroll-smooth z-20 bg-[#fafafa]">
+    <header className="w-full max-w-screen-xl mx-auto p-4 md:py-8 bg-[#fafafa]">
       <nav className="max-w-[1440px] mx-auto flex justify-between items-center py-4 px-6 sm:px-16">
         <Link href="https://codeguruozzy.com" className="flex justify-center items-center">
           <Image src="/ozzylogo.png" alt="nav-logo" width={120} height={20} className="object-contain"/>
